@@ -290,21 +290,25 @@
     <div class="container">
         <div class="row d-flex align-items-center">
             <div class="col-md-6">
-                <form>
+                <form data-toggle="validator">
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Nome</label>
-                        <input type="nome" class="form-control border border-dark" id="exampleFormControlInput1"
-                            >
+                        <input type="nome" class="form-control border border-dark" id="exampleFormControlInput1" data-minlength="3" required data-error="Por favor, insira um nome minimo 3 caracteres." required>
+                        
+                        <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Telefone</label>
                         <input type="telefone" class="form-control border border-dark" id="exampleFormControlInput1"
-                            >
+                        data-minlength="11" required data-error="Por favor, insira um contato correto." required>
+                        <div class="help-block with-errors"></div>	                                
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlInput1">seu endereço de E-mail</label>
+                        <label for="exampleFormControlInput1">Seu endereço de E-mail</label>
                         <input type="email" class="form-control border border-dark" id="exampleFormControlInput1"
-                            placeholder="nome@exemplo.com">
+                            placeholder="nome@exemplo.com" data-error="Por favor, informe um e-mail correto."required>
+                            <div class="help-block with-errors"></div>
+                            
                     </div>
 
                     <div class="form-group">
@@ -356,6 +360,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+
+        <script src="assets/js/arquivo.js"></script>
     <!--Scripts-->
 </body>
 
